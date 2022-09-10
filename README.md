@@ -92,4 +92,46 @@ return (
   </ul>
 );
 ```
+## React Testing Library
+* The React Testing Library, provides functions that will help
+  * test React components, 
+  * the capacity to render components and 
+  * query functions that can return DOM elements.
+
+* The jest-dom package, which is a library that extends Jest with custom matchers to enable inspection of various parts of the DOM.
+
+## Testing React Components
+`import { render, cleanup } from '@testing-library/react';`
+* `render` is a function that takes a component and returns a render result.
+* `cleanup` is a function that cleans up the render result i.e removes the DOM elements to prevent memory leaks.
+`import '@testing-library/jest-dom/extend-expect';`
+* `extend-expect` is a function that extends the expect function to add custom matchers.
+* `@testing-library/jest-dom` is a library that provides custom matchers for DOM elements.
+
+## Test Cycle
+* import the components you want to test
+* configure the test environment
+* call cleanup after each test `afterEach(cleanup)`
+* describe the test
+```js
+  afterEach(cleanup);
+  
+  describe('App', () => {
+    it('renders without crashing', () => {
+      const { getByText } = render(<App />);
+      const linkElement = getByText(/learn react/i);
+      expect(linkElement).toBeInTheDocument();
+    });
+  });
+```
+
+## `asFragment`
+* `asFragment` is a function that returns a serialized HTML representation of the component.
+* we can use `asFragment` to test the component.
+```jsx
+  it('renders without crashing', () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+```
 
