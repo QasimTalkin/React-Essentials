@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Component renders correctly renders correctly 1`] = `
+<DocumentFragment>
+  <nav
+    class="w-full bg-white shadow"
+  >
+    <div
+      class="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8"
+    >
+      <div>
+        <div
+          class="flex items-center justify-between py-3 md:py-5 md:block"
+        >
+          <a
+            href="#"
+          >
+            <h2
+              class="text-2xl font-bold"
+            >
+              ReactCoffee
+            </h2>
+          </a>
+          <div
+            class="md:hidden"
+          >
+            <button
+              class="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 hidden"
+        >
+          <ul
+            class="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0"
+          >
+            <li
+              class="text-gray-600 hover:text-blue-600"
+            >
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="text-gray-600 hover:text-blue-600"
+            >
+              <a
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+            <li
+              class="text-gray-600 hover:text-blue-600"
+            >
+              <a
+                href="/contact"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

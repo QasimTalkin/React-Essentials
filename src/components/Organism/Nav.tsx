@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { useState } from "react";
 
 const navItems = [ {name:'Home', link:'/'}, { name: 'About', link: '/about' }, { name: 'Contact', link: '/contact' } ];
 
@@ -13,7 +13,7 @@ export default function Nav() {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="#">
+            <a href="/">
               <h2 className="text-2xl font-bold">ReactCoffee</h2>
             </a>
             <div className="md:hidden">

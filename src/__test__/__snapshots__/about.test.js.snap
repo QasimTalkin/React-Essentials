@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About Component renders correctly renders correctly 1`] = `
+<DocumentFragment>
+  <section>
+    <h1
+      class="text-3xl font-bold underline"
+    >
+      Welcome a
+    </h1>
+    <img
+      alt="cover pic"
+      id="cover-pic"
+      src="https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80"
+      style="width: 100%;"
+    />
+  </section>
+</DocumentFragment>
+`;
