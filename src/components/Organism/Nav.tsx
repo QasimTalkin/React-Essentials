@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const navItems = [ {name:'Home', link:'/'}, { name: 'About', link: '/about' }, { name: 'Contact', link: '/contact' } ];
+const navItems = [ {name:'Home', link:'/'}, { name: 'About', link: '/about' }, { name: 'Contact', link: '/contact' }, { name: 'VirtualDemo', link: '/SampleDom' }  ];
 
-function toastSuccess(message: string) {
-  alert(message);
-}
+// function toastSuccess(message: string) {
+//   alert(message);
+// }
 
 export default function Nav() {
   const [navbar, setNavbar] = useState(false);
@@ -64,7 +64,7 @@ export default function Nav() {
             
               {/* onClick show toast of item name */}
               {navItems.map((item, index) => ( 
-                <li className="text-gray-600 hover:text-blue-600" key={index} onClick={()=>toastSuccess(item.name)} >
+                <li className="text-gray-600 hover:text-blue-600" key={index} /*onClick={()=>toastSuccess(item.name)}*/ >
                   <a href={item.link}>{item.name}</a>
                 </li>
               ))}

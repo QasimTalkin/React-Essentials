@@ -1,23 +1,24 @@
-import './App.css';
-import React from 'react';
-import About from './components/Organism/About';
-import Nav from './components/Organism/Nav';
+import "./App.css";
+import React from "react";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./components/Organism/pages/HomePage";
+import SampleDom from "./components/Organism/pages/SampleDom";
 
 const user = {
-  name: 'Abul Qasim',
-  title: 'Software Engineer'
-}
+  name: "Abul Qasim",
+  title: "Software Engineer",
+};
 function App() {
-  let reactElem = React.createElement('div', {user}, 'Hello, ' + user.name);
+  let reactElem = React.createElement("div", { user }, "Hello, " + user.name);
   return (
-    <div className='App'>
-    <main>
-     <Nav/>
-      <About/>
-      From react: {reactElem}
-      From JSX: <div>Hello, {user.name}</div>
-    </main>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sampleDom" element={<SampleDom />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+    </Router>
   );
 }
 

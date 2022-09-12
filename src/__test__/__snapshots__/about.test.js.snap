@@ -6,7 +6,7 @@ exports[`About Component renders correctly renders correctly 1`] = `
     <h1
       class="text-3xl font-bold underline"
     >
-      Welcome a
+      Welcome Abul
     </h1>
     <img
       alt="cover pic"
