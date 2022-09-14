@@ -13,4 +13,4 @@ function counter() {
   counterDom.innerHTML = count++;
 }
 
-setInterval(counter, 1000);
+setInterval(counter, 1000); 
