@@ -49,12 +49,18 @@ Transpile is a process that takes JSX and converts it to JavaScript.
 * Imports: You need to import React in every component file. You can also import any images or CSS you want to use at the top.
 
 ## JSX and React.createElement
+<style scoped>
+{font-size: 1.7em;}
+</style>
 * JSX is a syntax extension to JavaScript that allows you to write HTML-like syntax in JavaScript. 
   * `<div user={user}>Hello, {user.name}</div>>` is JSX syntax.
+Which is equivalent to:
+  * `React.createElement('div', {user: user}, 'Hello, ', user.name);`
 * React.createElement is a function that takes two arguments: the tag name and the attributes.
-  * `React.createElement('div', {user}, 'Hello, ' + user.name)` is equivalent to `<div user={user}>Hello, {user.name}</div>`
+
 ```jsx
   let reactElem = React.createElement('div', {user}, 'Hello, ' + user.name);
+  // which is equivalent to
   return (
     <>
       From react: {reactElem}
@@ -64,6 +70,9 @@ Transpile is a process that takes JSX and converts it to JavaScript.
 ```
 
 ## Reusable Components
+<style scoped>
+{font-size: 1.7em;}
+</style>
 * A reusable component is a component that can be used in multiple places in your app.
 * We will follow Atomic Design principles and create reusable components.
   * divide your app into Atomic levels
@@ -76,7 +85,11 @@ Create a Folder `src/components` and 3 folders: `Atoms`, `Molecules`, `Organisms
 * The key prop is used to uniquely identify each element in an array of elements.
 * Whenever we map over anything in JSX, the outermost element must have a key attribute that's set to be something unique. This helps React keep track of items in the virtual DOM.
 
-## rendering elements
+## Rendering elements using `map()`
+<style scoped>
+{font-size: 1.8em;}
+
+</style>
 * `map` is a function that takes an array and returns an array of elements.
 * we will use map to render list of items in the virtual DOM.
 * we include the key prop to uniquely identify each item in the array.
@@ -109,6 +122,9 @@ return (
 * `@testing-library/jest-dom` is a library that provides custom matchers for DOM elements.
 
 ## Test Cycle
+<style scoped>
+{font-size: 1.7em;}
+</style>
 * import the components you want to test
 * configure the test environment
 * call cleanup after each test `afterEach(cleanup)`

@@ -3,13 +3,14 @@ var root2Dom = document.getElementById('root2');
 let customDom = document.createElement('div');
 let count = 0;
 
+customDom.innerHTML = `<h1 id='counterJS'>Counter 1 count: ${++count}</h1>
+<button onclick="counter()" style="color:blue" >Click me</button>`;
+root2Dom.appendChild(customDom)
 
 
+counterDom = document.getElementById('counterJS')
 function counter() {
-  customDom.innerHTML = `<h1>Counter 1 count: ${++count}</h1>
-    <button onclick="counter()" style="color:blue" >Click me</button>`;
+  counterDom.innerHTML = count++;
 }
 
 setInterval(counter, 1000);
-
-root2Dom.appendChild(customDom)
