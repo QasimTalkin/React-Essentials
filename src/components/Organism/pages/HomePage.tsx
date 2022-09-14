@@ -5,7 +5,7 @@ import Nav from '../Nav';
 export default function HomePage() {
   return (
     <>
-    <div className='App'>
+    <div className='App bg-emerald-50'>
     <main>
      <Nav/>
       <About/>

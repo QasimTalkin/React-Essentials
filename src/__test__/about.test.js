@@ -1,6 +1,14 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react'; 
 import About from '../components/Organism/About'
+import pokemon from './data/pokemon'
+
+const mockCurrentPokemon = jest.fn();
+const mockSetPokemon = jest.fn();
+
+
+
+
 
 afterEach(cleanup);
 
@@ -11,11 +19,5 @@ describe('About Component renders correctly', () => {
     expect(asFragment()).toMatchSnapshot();
   });
   
-  test('rendered image contains alt text', ()=> {
-  
-    const { getByAltText } = render(<About />);
-    const image = getByAltText(/pic/i);
-    expect(image).toBeInTheDocument();
-  });
-  
+
 });

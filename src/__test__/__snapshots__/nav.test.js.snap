@@ -79,6 +79,15 @@ exports[`Nav Component renders correctly renders correctly 1`] = `
                 Contact
               </a>
             </li>
+            <li
+              class="text-gray-600 hover:text-blue-600"
+            >
+              <a
+                href="/SampleDom"
+              >
+                VirtualDemo
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -151,3 +151,75 @@ return (
   });
 ```
 
+# State in React
+changing the value of a variable within a component does not cause the component to re-render.
+we need to change the state of the component to cause the component to re-render.
+
+## useState
+* `useState` is a function that takes an initial value and returns an array with two elements.
+* the first element is the current value of the state, the second element is a function that can be used to update the state.
+* the change in state will cause the component to re-render.
+```jsx
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+```
+
+## rules of hooks
+* Hooks are JavaScript functions, but they impose two additional rules:
+  * Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
+  * Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks. We’ll learn about them in a moment.)
+
+## React Dev Tool extension
+The React Dev Tools extension is a browser extension that allows you to inspect the React component hierarchy in the Chrome and Firefox Developer Tools.
+* install the extension
+* open the browser developer tools
+* select the React tab
+* you can inspect the component hierarchy and the state of the components
+the ouput for a useState count component looks like
+```js
+  {
+    "count": 0,
+    "setCount": function setCount() {}
+  }
+```
+
+## useEffect
+`useEffect` is a function that takes a function and an array of dependencies, it reflects the lifecycle methods of the component.
+* `useEffect` will be called after the component is rendered.
+* it takes in a callback function that will be called after the component is rendered.
+* the second argument is an array of dependencies, if the dependencies change, the callback function will be called.
+* if the second argument is an empty array, the callback function will be called only once after the component is rendered.
+```jsx
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [count]);
+```
+## useEffect cleanup
+* `useEffect` can return a cleanup function that will be called before the component is unmounted.
+```jsx
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+    return () => {
+      console.log('cleanup');
+    };
+  }, [count]);
+```
+
+## useRef
+`useRef` is a function that takes an initial value and returns an object with a `current` property.
+* `useRef` can be used to store a mutable value.
+* `useRef` will not cause the component to re-render.
+```jsx
+  const inputRef = useRef(null);
+  return (
+    <div>
+      <input ref={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>Focus</button>
+    </div>
+  );
+```
