@@ -11,7 +11,6 @@ export default function PokeCard(props:obj) {
       .then((res) => res.json())
       .then((data) => {
         setPokemon(data);
-        console.log(data);
         setLoading(true);
       });
   }, []);
@@ -25,21 +24,13 @@ export default function PokeCard(props:obj) {
           />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{pokemon.name}</div>
-            <p className="text-gray-700 text-base">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea incidunt cupiditate laborum.
-            </p>
           </div>
           <div className="px-6 pt-4 pb-2">
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-              {pokemon.moves[0]?.move.name}
+           {pokemon.moves.slice(0, 5).map((move:any) => <span key={move.move.name} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+              {move.move.name}
             </span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
-            {pokemon.moves[1]?.move.name}
-            </span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-            {pokemon.moves[2]?.move.name}
-            </span>
-          </div>
+           )}
+         </div>
         </div>}
     </>
   );

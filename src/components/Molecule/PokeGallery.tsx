@@ -20,7 +20,6 @@ export default function PokeGallery() {
   useEffect(() => { 
     pokemonData().then((data) => { 
       setData(data);
-      console.log(data);
       setLoading(false);
     });
   }, []);
