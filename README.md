@@ -156,6 +156,9 @@ changing the value of a variable within a component does not cause the component
 we need to change the state of the component to cause the component to re-render.
 
 ## useState
+<style scoped>
+{font-size: 1.7em;}
+</style>
 * `useState` is a function that takes an initial value and returns an array with two elements.
 * the first element is the current value of the state, the second element is a function that can be used to update the state.
 * the change in state will cause the component to re-render.
@@ -172,8 +175,7 @@ we need to change the state of the component to cause the component to re-render
 ## rules of hooks
 * Hooks are JavaScript functions, but they impose two additional rules:
   * Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
-  * Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks — your own custom Hooks. We’ll learn about them in a moment.)
-
+  * Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. 
 ## React Dev Tool extension
 The React Dev Tools extension is a browser extension that allows you to inspect the React component hierarchy in the Chrome and Firefox Developer Tools.
 * install the extension
@@ -189,6 +191,9 @@ the ouput for a useState count component looks like
 ```
 
 ## useEffect
+<style scoped>
+{font-size: 1.7em;}
+</style>
 `useEffect` is a function that takes a function and an array of dependencies, it reflects the lifecycle methods of the component.
 * `useEffect` will be called after the component is rendered.
 * it takes in a callback function that will be called after the component is rendered.
